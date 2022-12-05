@@ -11,6 +11,7 @@ code = file.readlines()
 rootNode = Node()
 actualNode = rootNode
 functionList = []
+error = False
 
 if __name__ == '__main__':
     for line in code:
@@ -21,7 +22,10 @@ if __name__ == '__main__':
         elif EnumDeclaration.has_value(line):
             actualNode.addInstruction(Declaration(line))
         elif EnumCondition.has_value(line):
-            actualNode = actualNode.addNode(Condition(line))
+            if Condition.IsSimpleInstruction(line):
+                actualNode.addInstruction(Condition(line))
+            else:
+                actualNode = actualNode.addNode(Condition(line))
         elif line[0] == BREAK:
             actualNode.addInstruction(Break())
         elif line[0] == RETURN:
@@ -30,6 +34,14 @@ if __name__ == '__main__':
             actualNode.addInstruction(CallFunction(line))
         elif line[0] == str(EnumBLOCK.END):
             actualNode = actualNode.parentNode
-
-    for i in rootNode.instructions:
-        print(i)
+        elif line[0] == "{" or line[0] == "":
+            pass
+        else:
+            error = True
+            break
+    
+    if error :
+        print("Error Synthaxe")
+    else:
+        for i in rootNode.instructions:
+            print(i)

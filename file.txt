@@ -1,6 +1,6 @@
 func coucou ( a , b)
 {
-	int a ;
+	if ( a > b ) i = i + 2 ;
 	while ( i < 10 ) {
 		int b ;
 		while ( i < 10 ) {

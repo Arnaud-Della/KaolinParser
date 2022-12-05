@@ -40,8 +40,11 @@ class Condition(Instruction):
         self.Instruction = type(self).__name__
         self.Name = line[0]
         if self.Name != "else":
-            tamp = " ".join(line)
-            self.Condition = self.find_between_r(tamp,"(",")")
+                tamp = " ".join(line)
+                self.Condition = self.find_between_r(tamp,"(",")")
+        if line[len(line) - 1] == ";":
+            self.SimpleInstruction = self.find_between_r(" ".join(line),")",";").strip()
+
     def find_between_r(self, s, first, last ):
         try:
             start = s.rindex( first ) + len( first )
@@ -49,6 +52,12 @@ class Condition(Instruction):
             return s[start:end]
         except ValueError:
             return ""
+    @staticmethod
+    def IsSimpleInstruction(line):
+        if line[len(line) - 1] == ";":
+            return True
+        else:
+            return False
 
 class Break(Instruction):
     def __init__(self) -> None:
