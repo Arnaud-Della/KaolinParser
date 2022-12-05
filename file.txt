@@ -1,0 +1,25 @@
+func main ()
+{
+	int a ;
+	while ( i < 10 ){
+		int b ;
+		while ( i < 10 ){
+			int c ;
+		}
+		int d ;
+	}
+	int e ;
+}
+
+func coucou ( a , b)
+{
+	int a ;
+	while ( i < 10 ){
+		int b ;
+		while ( i < 10 ){
+			int c ;
+		}
+		int d ;
+	}
+	int e ;
+}

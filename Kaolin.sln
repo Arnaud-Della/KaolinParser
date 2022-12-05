@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Kaolin", "Kaolin.pyproj", "{185A14FB-8EFF-41D3-BF63-912DEDFE547F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{185A14FB-8EFF-41D3-BF63-912DEDFE547F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185A14FB-8EFF-41D3-BF63-912DEDFE547F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34BB82E6-7DA7-458E-A82A-A27F8B68E0E5}
+	EndGlobalSection
+EndGlobal
