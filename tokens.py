@@ -57,5 +57,5 @@ class EnumBLOCK(Detection):
     def __str__(self):
         return str(self.value)
 
-#    BREAK = "break"
-#    RETURN = "return"
+BREAK = "break"
+RETURN = "return"

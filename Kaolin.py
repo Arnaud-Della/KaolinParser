@@ -1,10 +1,10 @@
-
 from tokens import *
 from ObjectsClass import *
 from Node import Node
 from sys import argv
 
-filename = argv[1]
+#filename = argv[1]
+filename = "file.txt"
 file = open(filename,"r")
 code = file.readlines()
 
@@ -20,6 +20,10 @@ if __name__ == '__main__':
             actualNode.addInstruction(Declaration(line))
         elif EnumCondition.has_value(line):
             actualNode = actualNode.addNode(Condition(line))
+        elif line[0] == BREAK:
+            actualNode.addInstruction(Break())
+        elif line[0] == RETURN:
+            actualNode.addInstruction(Return(line))
         elif line[0] == str(EnumBLOCK.END):
             actualNode = actualNode.parentNode
 
