@@ -60,3 +60,16 @@ class Return(Instruction):
          line.remove("return")
          line.remove(";")
          self.Value = " ".join(line)
+
+class CallFunction(Instruction):
+    def __init__(self,line) -> None:
+        self.Instruction = type(self).__name__
+        self.Name = line[0]
+        self.Parameters = self.find_between_r(" ".join(line),"(",")")
+    def find_between_r(self, s, first, last ):
+        try:
+            start = s.rindex( first ) + len( first )
+            end = s.rindex( last, start )
+            return s[start:end]
+        except ValueError:
+            return ""

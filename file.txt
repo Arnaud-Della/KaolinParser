@@ -1,5 +1,19 @@
+func coucou ( a , b)
+{
+	int a ;
+	while ( i < 10 ) {
+		int b ;
+		while ( i < 10 ) {
+			int c ;
+		}
+		int d ;
+	}
+	int e ;
+}
+
 func main ()
 {
+	coucou ( a , b)
 	int a ;
 	if ( i == 10 ) {
 		return "toto" ;
@@ -11,19 +25,6 @@ func main ()
 		int b ;
 		while ( i < 10 ) {
 			break ;
-		}
-		int d ;
-	}
-	int e ;
-}
-
-func coucou ( a , b)
-{
-	int a ;
-	while ( i < 10 ) {
-		int b ;
-		while ( i < 10 ) {
-			int c ;
 		}
 		int d ;
 	}

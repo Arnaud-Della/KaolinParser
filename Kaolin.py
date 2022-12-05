@@ -10,11 +10,13 @@ code = file.readlines()
 
 rootNode = Node()
 actualNode = rootNode
+functionList = []
 
 if __name__ == '__main__':
     for line in code:
         line = line.strip().split(" ")
         if EnumFunction.has_value(line):
+            functionList.append(line[1])
             actualNode = actualNode.addNode(Function(line))
         elif EnumDeclaration.has_value(line):
             actualNode.addInstruction(Declaration(line))
@@ -24,6 +26,8 @@ if __name__ == '__main__':
             actualNode.addInstruction(Break())
         elif line[0] == RETURN:
             actualNode.addInstruction(Return(line))
+        elif line[0] in functionList:
+            actualNode.addInstruction(CallFunction(line))
         elif line[0] == str(EnumBLOCK.END):
             actualNode = actualNode.parentNode
 
