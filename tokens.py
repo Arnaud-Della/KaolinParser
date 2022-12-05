@@ -35,6 +35,8 @@ class EnumAffectation(Detection):
     MULTIPLICATION = "*"
     DIVISION = "/"
     DECLARATION = "="
+    def __str__(self):
+        return str(self.value)
 
 class EnumLogiqueOperator(Detection):
     AND = "&&"

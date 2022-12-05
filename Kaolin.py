@@ -4,7 +4,7 @@ from Node import Node
 from sys import argv
 
 #filename = argv[1]
-filename = "file.txt"
+filename = "file2.txt"
 file = open(filename,"r")
 code = file.readlines()
 
@@ -36,6 +36,9 @@ if __name__ == '__main__':
             actualNode = actualNode.parentNode
         elif line[0] == "{" or line[0] == "":
             pass
+        elif len(line)>=1:
+            if line[1] == str(EnumAffectation.DECLARATION):
+                actualNode.addInstruction(Affectation(line))
         else:
             error = True
             break
