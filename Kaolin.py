@@ -3,8 +3,11 @@ from ObjectsClass import *
 from Node import Node
 from sys import argv
 
-filename = argv[1]
-#filename = "file2.txt"
+try :
+    filename = argv[1]
+except :
+    filename = "file2.txt"
+
 file = open(filename,"r")
 code = file.readlines()
 
